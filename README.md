@@ -11,4 +11,9 @@ msfinstaller -i -p <password> -r [-h]
 * -r Install latest Ruby RVM (Metasploit requires ruby version => 2.0
 * -h Help Message
 
+Examples:
+
+msfinstaller -i -p msf -r
+
 All Credit goes to Dark Operator for original script
+
