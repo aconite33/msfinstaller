@@ -95,6 +95,9 @@ if [[ "$KVER" =~ Darwin ]]; then
 
 elif [[ "$KVER" =~ buntu ]]; then
     install_armitage_linux
+    
+elif [[ "$KVER" =~ kali ]]; then
+    install_armitage_linux
 
 else
     print_error "The script does not support this platform at this moment."
