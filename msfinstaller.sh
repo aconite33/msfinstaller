@@ -127,7 +127,7 @@ function install_msf_linux
             git clone https://github.com/rapid7/metasploit-framework.git /usr/local/share/metasploit-framework >> $LOGFILE 2>&1
         fi
 		print_status "Modifying local PATH variable"
-		echo "export PATH=$PATH:/usr/local/share/metasploit-framework:${PATH}" >> ~/.bashrc
+		echo "export PATH=/usr/local/share/metasploit-framework:${PATH}" >> ~/.bashrc
 		source ~/.bashrc >> $LOGFILE 2>&1
         print_status "Linking metasploit commands."
         cd /usr/local/share/metasploit-framework
