@@ -127,6 +127,7 @@ function install_msf_linux
             git clone https://github.com/rapid7/metasploit-framework.git /usr/local/share/metasploit-framework >> $LOGFILE 2>&1
         fi
 		print_status "Modifying local PATH variable"
+		echo "source /usr/local/rvm/scripts/rvm" >> ~/.bashrc
 		echo "export PATH=/usr/local/share/metasploit-framework:${PATH}" >> ~/.bashrc
 		source ~/.bashrc >> $LOGFILE 2>&1
         print_status "Linking metasploit commands."
@@ -173,7 +174,7 @@ function install_msf_linux
         #    ~/.rvm/bin/rvm 1.9.3 do bundle install  >> $LOGFILE 2>&1
         if [[ $RVM -eq 0 ]]; then
             print_status "Installing required ruby gems by Framework using bundler on System Ruby"
-			/usr/local/rvm/gems/ruby-2.2.1@global/bin/bundle install >> $LOGFILE 2>&1
+			install >> $LOGFILE 2>&1
         fi
         print_status "Starting Metasploit so as to populate the database."
         if [[ $RVM -eq 0 ]]; then
