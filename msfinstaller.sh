@@ -241,7 +241,8 @@ function usage ()
 function install_ruby_rvm ()
 {
     print_status "Installing GPG For Ruby..."
-    gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 >> $LOGFILE 2>&1
+    #gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 >> $LOGFILE 2>&1
+    curl -sSL https://rvm.io/mpapis.asc | gpg --import - >> $LOGFILE 2>&1
     print_status "Installing stable version of latest ruby..."
     curl -sSL https://get.rvm.io | bash -s stable --ruby >> $LOGFILE 2>&1
 	#sleep 30
