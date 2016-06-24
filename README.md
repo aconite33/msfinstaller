@@ -14,7 +14,9 @@ msfinstaller -i -p <password> -r [-h]
 Examples:
 msfinstaller -i -p msf -r
 
-***Current Bug***
+***Current Bugs***
+You will need a restart. Ruby isn't sourcing bashrc correctly and requires you to bounce the box.
+
 If you get:
 "Could not find XXXX in any of the sources
 Run `bundle install` to install missing gems."
